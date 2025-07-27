@@ -20,10 +20,13 @@ jobs:
           channel: 'stable'
 
       - run: flutter pub get
+        working-directory: Mashro3y
       - run: flutter test
+        working-directory: Mashro3y
       - run: flutter build apk --release
+        working-directory: Mashro3y
 
       - uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: build/app/outputs/flutter/apk/app-release.apk
+          path: Mashro3y/build/app/outputs/flutter/apk/app-release.apk
